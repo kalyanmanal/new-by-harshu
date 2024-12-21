@@ -45,7 +45,9 @@ else:
     ADMINS = [int(admins) for admins in ADMINS.split()]
 
 # Channels
-
+INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1002324460500').split()]
+if len(INDEX_CHANNELS) == 0:
+    print('Info - INDEX_CHANNELS is empty')
 LOG_CHANNEL = environ.get('LOG_CHANNEL', '-1002324460500')
 if len(LOG_CHANNEL) == 0:
     print('Error - LOG_CHANNEL is missing, exiting now')
@@ -110,16 +112,6 @@ PAYMENT_QR = environ.get('PAYMENT_QR', 'https://radare.arzfun.com/api/tg/photo?i
 OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'manalharshal-1@oksbi')
 
 # for stream
-
-else:
-    if URL.startswith(('https://', 'http://')):
-        if not URL.endswith("/"):
-            URL += '/'
-    elif is_valid_ip(URL):
-        URL = f'http://{URL}/'
-    else:
-        print('Error - URL is not valid, exiting now')
-        exit()
 
 #start_command_reactions
 REACTIONS = ["🤝", "😇", "🤗", "😍", "👍", "🎅", "😐", "🥰", "🤩", "😱", "🤣", "😘", "👏", "😛", "😈", "🎉", "⚡️", "🫡", "🤓", "😎", "🏆", "🔥", "🤭", "🌚", "🆒", "👻", "😁"] #don't add any emoji because tg not support all emoji reactions

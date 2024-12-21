@@ -112,6 +112,26 @@ PAYMENT_QR = environ.get('PAYMENT_QR', 'https://radare.arzfun.com/api/tg/photo?i
 OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'manalharshal-1@oksbi')
 
 # for stream
+IS_STREAM = is_enabled('IS_STREAM', True)
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1002324460500")
+if len(BIN_CHANNEL) == 0:
+    print('Error - BIN_CHANNEL is missing, exiting now')
+    exit()
+else:
+    BIN_CHANNEL = int(BIN_CHANNEL)
+URL = environ.get("URL", "https://t.me/c/2246848988/5505")
+if len(URL) == 0:
+    print('Error - URL is missing, exiting now')
+    exit()
+else:
+    if URL.startswith(('https://', 'http://')):
+        if not URL.endswith("/"):
+            URL += '/'
+    elif is_valid_ip(URL):
+        URL = f'http://{URL}/'
+    else:
+        print('Error - URL is not valid, exiting now')
+        exit()
 
 #start_command_reactions
 REACTIONS = ["🤝", "😇", "🤗", "😍", "👍", "🎅", "😐", "🥰", "🤩", "😱", "🤣", "😘", "👏", "😛", "😈", "🎉", "⚡️", "🫡", "🤓", "😎", "🏆", "🔥", "🤭", "🌚", "🆒", "👻", "😁"] #don't add any emoji because tg not support all emoji reactions

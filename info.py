@@ -72,12 +72,12 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
 
 # Links
-SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/jdjrjdjfbdb')
+SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/moviebyhm')
 OWNER_USERNAME = environ.get("OWNER_USERNAME", "https://t.me/Harshu801049")
 UPDATES_LINK = environ.get('UPDATES_LINK', 'http://t.me/Hm_search143_bot')
-FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/jdjrjdjfbdb')
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/jdjrjdjfbdb")
-VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/jdjrjdjfbdb")
+FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/moviebyhm')
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/moviebyhm")
+VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/moviebyhm")
 
 # Bot settings
 DELETE_TIME = int(environ.get('DELETE_TIME', 600)) # Add time in seconds

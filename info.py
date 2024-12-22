@@ -105,7 +105,7 @@ LINK_MODE = is_enabled("LINK_MODE", False)
 AUTO_FILTER = is_enabled('AUTO_FILTER', True)
 IMDB = is_enabled('IMDB', True)
 SPELL_CHECK = is_enabled("SPELL_CHECK", True)
-SHORTLINK = is_enabled('SHORTLINK', True)
+SHORTLINK = is_enabled('SHORTLINK', False)
 
 #premium info
 PAYMENT_QR = environ.get('PAYMENT_QR', 'https://radare.arzfun.com/api/tg/photo?id=AgACAgUAAxkBAAECz4VnZq4E8A21-vN_tPbUB7YyDQJO6wAC6sMxGz5UOVdHo6xrguy7egEAAwIAA3kAAzYE')
